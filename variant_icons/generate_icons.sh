@@ -2,9 +2,18 @@
 normal=$(tput sgr0)
 red=$(tput setaf 1)
 
+FIND="find"
+if [[ ! -z `which gfind` ]]; then
+    FIND=`gfind`
+fi
+
 if [[ -z `which magick` ]]; then
     echo "Installing Image Magick"
-    brew install imagemagick
+    if [[ "`uname -s`" == "Darwin" ]]; then
+        brew install imagemagick
+    else
+        pacman -S imagemagick
+    fi
     if [[ $? != 0 ]]; then
         echo "${red}Unable to install image magick, Exiting.${normal}"
         exit $?
@@ -31,10 +40,10 @@ sizes=(
     "48" 
 )
 for (( i=0; i<${#paths[@]}; i++ )); do
-    for input in `gfind . -name "*ic_launcher*" |grep -E "\/.*"`;do 
+    for input in `$FIND . -name "*ic_launcher*" |grep -E "/.*"`;do 
         outputPath="../NvidiaShieldTVController/app/src/main/res/${paths[$i]}/"
         output=$(echo $input |awk -v path=$outputPath -F "/" '{print path$2"_"$3}';)
-        magick convert $input -resize ${sizes[$i]} $output
+        magick $input -resize ${sizes[$i]} $output
     done
 done
 
@@ -49,9 +58,9 @@ sizes=(
     "320x180" 
 )
 for (( i=0; i<${#paths[@]}; i++ )); do
-    for input in `gfind . -name "*ic_banner*" |grep -E "\/.*"`;do 
+    for input in `$FIND . -name "*ic_banner*" |grep -E "/.*"`;do 
         outputPath="../NvidiaShieldTVController/app/src/main/res/${paths[$i]}/"
         output=$(echo $input |awk -v path=$outputPath -F "/" '{print path$2"_"$3}';)
-        magick convert $input -resize ${sizes[$i]} $output
+        magick $input -resize ${sizes[$i]} $output
     done
 done

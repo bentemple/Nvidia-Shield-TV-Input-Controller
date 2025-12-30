@@ -12,9 +12,8 @@ import java.net.HttpURLConnection
 import java.net.URL
 
 /**
- * @author ben.temple@epicgames.com (Benjamin Temple) 2024.07.19
+ * @author ben.temple@gmail.com (Benjamin Temple) 2024.07.19
  */
-
 enum class HaCommand {
     SELECT_TV_INPUT;
 
