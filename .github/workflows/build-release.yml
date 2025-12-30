@@ -87,6 +87,18 @@ jobs:
           name: app-gameconsole-release.apk
           path: NvidiaShieldTVController/app/build/outputs/apk/gameconsole/release/app-gameconsole-release.apk
 
+      - name: Upload Set-Top Box APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: app-set_top_box-release.apk
+          path: NvidiaShieldTVController/app/build/outputs/apk/set_top_box/release/app-set_top_box-release.apk
+
+      - name: Upload Steamdeck APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: app-steamdeck-release.apk
+          path: NvidiaShieldTVController/app/build/outputs/apk/steamdeck/release/app-steamdeck-release.apk
+
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
         with:
@@ -99,6 +111,8 @@ jobs:
             NvidiaShieldTVController/app/build/outputs/apk/ps5/release/app-ps5-release.apk
             NvidiaShieldTVController/app/build/outputs/apk/xboxone/release/app-xboxone-release.apk
             NvidiaShieldTVController/app/build/outputs/apk/gameconsole/release/app-gameconsole-release.apk
+            NvidiaShieldTVController/app/build/outputs/apk/set_top_box/release/app-set_top_box-release.apk
+            NvidiaShieldTVController/app/build/outputs/apk/steamdeck/release/app-steamdeck-release.apk
           draft: true
           prerelease: false
           generate_release_notes: true
