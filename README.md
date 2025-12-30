@@ -1,6 +1,8 @@
 # Nvidia Shield TV Input Controller
 This project is what I used to consolidate all of my TV remotes down to just the Nvidia Shield TV Remote. I have an `Nvidia Shield TV Pro (2019)` connected to my LG TV via HDMI 1, a `Playstation 4` on HDMI 2, and a `Nintendo Switch` on HDMI 3. With this application (3 applications) installed on my tv, I can select each application `Nvidia Shield TV Pro`, `Playstation 4`, or `Nintendo Switch` and it will automatically switch to the associated input for the given device. I then can press on the Netflix button to return to the shield at any time. The Netflix button works like normal, while the Nvidia Shield is the selected input.
 
+See [SupportedVariants.md](./SupportedVariants.md) for the list of commands / icons supported.
+
 ## Use:
 Once setup, this will create discrete app icons on the Nvidia Shield that deliver events to your Home Assistant instance to change your TV's input.
 
