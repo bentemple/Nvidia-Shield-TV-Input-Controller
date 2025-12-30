@@ -111,7 +111,7 @@ jobs:
             NvidiaShieldTVController/app/build/outputs/apk/ps5/release/app-ps5-release.apk
             NvidiaShieldTVController/app/build/outputs/apk/xboxone/release/app-xboxone-release.apk
             NvidiaShieldTVController/app/build/outputs/apk/gameconsole/release/app-gameconsole-release.apk
-            NvidiaShieldTVController/app/build/outputs/apk/set_top_box/releas/app-set_top_box-release.apk
+            NvidiaShieldTVController/app/build/outputs/apk/set_top_box/release/app-set_top_box-release.apk
             NvidiaShieldTVController/app/build/outputs/apk/steamdeck/release/app-steamdeck-release.apk
           draft: true
           prerelease: false
