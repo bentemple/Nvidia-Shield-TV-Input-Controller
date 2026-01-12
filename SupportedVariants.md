@@ -38,7 +38,7 @@ Home Assistant Command: `ps5`
 ![Banner](./variant_icons/ps5/ic_banner.webp?raw=true "Playstation5 Banner")
 
 ## Xbox
-Home Assistant Command: `xbox one`
+Home Assistant Command: `xboxone`
 
 ![Icon](./variant_icons/xboxone/ic_launcher.webp?raw=true "Xbox One Icon")
 ![Banner](./variant_icons/xboxone/ic_banner.webp?raw=true "Xbox One Banner")
